@@ -1,0 +1,12 @@
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.vbprojResolveAssemblyReference.cache
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.Form1.resources
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.Resources.resources
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.vbproj.GenerateResource.Cache
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\bin\Debug\TOPSIS.exe.config
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\bin\Debug\TOPSIS.exe
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\bin\Debug\TOPSIS.pdb
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\bin\Debug\TOPSIS.xml
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.exe
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.xml
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.pdb
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.PopUpFormPenduduk.resources
