@@ -50,18 +50,27 @@ Public Class PendudukDao
     End Property
 
 
-    'Public Function insert() As Boolean
-    '    Try
-    '        sql = "INSERT INTO nilai VALUES (null,'" + nilai.ToString + "',+'" + bobot.ToString + "')"
-    '        CRUD_data(sql)
-    '        Return True
-    '    Catch ex As Exception
-    '        MsgBox(ex.ToString)
-    '        Return False
-    '    End Try
-    'End Function
+    Public Function insert() As Boolean
+        Try
+            sql = "INSERT INTO penduduk VALUES (null,'" + nama.ToString + "',+'" + nik.ToString + "',+'" + alamat.ToString + "'," & 0 & ")"
+            CRUD_data(sql)
+            Return True
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Return False
+        End Try
+    End Function
 
-
+    Public Function updateData() As Boolean
+        Try
+            sql = "UPDATE penduduk SET nama= '" + nama.ToString + "',nik= '" + nik.ToString + "' ,alamat= '" + alamat.ToString + "'  where id= " & id & ""
+            CRUD_data(sql)
+            Return True
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Return False
+        End Try
+    End Function
 
     Public Function update() As Boolean
         Try
@@ -74,16 +83,21 @@ Public Class PendudukDao
         End Try
     End Function
 
-    'Public Function delete() As Boolean
-    '    Try
-    '        sql = "DELETE FROM nilai WHERE id= " & id & ""
-    '        CRUD_data(sql)
-    '        Return True
-    '    Catch ex As Exception
-    '        MsgBox(ex.ToString)
-    '        Return False
-    '    End Try
-    'End Function
+ 
+    Public Function selectAll() As List(Of PendudukDao)
+        Dim listPenduduk As New List(Of PendudukDao)
+        dtTable = get_dttable("Select * from penduduk")
+        listPenduduk = (From row As DataRow In dtTable.Rows
+                    Select New PendudukDao() With
+                           {.id = row("id"),
+                            .nama = row("nama"),
+                            .nik = row("nik"),
+                            .alamat = row("alamat"),
+                            .total_nilai = row("total_nilai")
+                            }).ToList
+        Return listPenduduk
+
+    End Function
 
     Public Function selectAll(sql As String) As List(Of PendudukDao)
         Dim listPenduduk As New List(Of PendudukDao)
@@ -116,18 +130,21 @@ Public Class PendudukDao
 
     End Function
 
-    'Public Function selectByNama(nama As String) As List(Of nilaiDao)
-    '    Dim listPasien As New List(Of nilaiDao)
-    '    sql = "SELECT * FROM nilai WHERE nilai like '%" + nama.ToString + "%'"
-    '    dtTable = get_dttable(sql)
-    '    listPasien = (From row As DataRow In dtTable.Rows
-    '                Select New nilaiDao() With
-    '                        {.id = row("id"),
-    '                        .nilai = row("nilai"),
-    '                        .bobot = row("bobot")
-    '                        }).ToList
-    '    Return listPasien
+    Public Function selectByNamaP(nama As String) As List(Of PendudukDao)
+        Dim listPenduduk As New List(Of PendudukDao)
 
-    'End Function
+        sql = " SELECT * FROM penduduk WHERE penduduk.nama like '%" + nama.ToString + "%'"
+        dtTable = get_dttable(sql)
+        listPenduduk = (From row As DataRow In dtTable.Rows
+                    Select New PendudukDao() With
+                           {.id = row("id"),
+                            .nama = row("nama"),
+                            .nik = row("nik"),
+                            .alamat = row("alamat"),
+                            .total_nilai = row("total_nilai")
+                            }).ToList
+        Return listPenduduk
+
+    End Function
 
 End Class

@@ -14,10 +14,10 @@
     'tabelPenduduk.Refresh()
 
     Private Sub tabelPenduduk_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles tabelPenduduk.MouseDoubleClick
-        Form1.txtID.Text = tabelPenduduk.CurrentRow.Cells(0).Value
-        Form1.txtNoKtp.Text = tabelPenduduk.CurrentRow.Cells(1).Value
-        Form1.txtNama.Text = tabelPenduduk.CurrentRow.Cells(2).Value
-        Form1.txtAlamat.Text = tabelPenduduk.CurrentRow.Cells(3).Value
+        Main.txtID.Text = tabelPenduduk.CurrentRow.Cells(0).Value
+        Main.txtNoKtp.Text = tabelPenduduk.CurrentRow.Cells(1).Value
+        Main.txtNama.Text = tabelPenduduk.CurrentRow.Cells(2).Value
+        Main.txtAlamat.Text = tabelPenduduk.CurrentRow.Cells(3).Value
         Me.Close()
     End Sub
 

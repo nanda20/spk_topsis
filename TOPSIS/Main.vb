@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class Form1
+Public Class Main
     Dim data(100, 30) As String
     Dim dataR(100, 30) As String
     Dim dataV(100, 30) As String
@@ -20,10 +20,6 @@ Public Class Form1
             AddNewComboBox(i, idKategori(i)).BringToFront()
             addNewLabel(i).BringToFront()
         Next
-
-        'MsgBox(copyT.SelectedValue.ToString)
-
-        'SELECT * FROM perhitungan pr join penduduk p on (pr.id_penduduk =p.id) join kriteria k on (pr.id_kriteria=k.id) join nilai n on (pr.id_nilai=n.id)
 
     End Sub
     Public Function AddNewComboBox(i As Integer, kategori As Integer) As System.Windows.Forms.ComboBox
