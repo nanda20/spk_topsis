@@ -2,9 +2,12 @@
 Imports TOPSIS
 Public Class NilaiDao
     Private _id As Integer
+    Private _kriteria As String
+    Private _bobotKriteria As Integer
     Private _nilai As String
-    Private _bobot As Integer
-    Private _id_kriteria As Integer
+    Private _konversi As Integer
+
+
 
 
     Public Property id() As Integer
@@ -15,20 +18,22 @@ Public Class NilaiDao
             _id = value
         End Set
     End Property
-    Public Property id_kriteria() As Integer
+
+    Public Property kriteria() As String
         Get
-            Return _id_kriteria
+            Return _kriteria
         End Get
-        Set(ByVal value As Integer)
-            _id_kriteria = value
+        Set(ByVal value As String)
+            _kriteria = value
         End Set
     End Property
-    Public Property bobot() As Integer
+
+    Public Property bobotKriteria() As Integer
         Get
-            Return _bobot
+            Return _bobotKriteria
         End Get
         Set(ByVal value As Integer)
-            _bobot = value
+            _bobotKriteria = value
         End Set
     End Property
 
@@ -40,68 +45,80 @@ Public Class NilaiDao
             _nilai = value
         End Set
     End Property
+    Public Property konversi() As Integer
+        Get
+            Return _konversi
+        End Get
+        Set(ByVal value As Integer)
+            _konversi = value
+        End Set
+    End Property
 
 
 
-    Public Function insert() As Boolean
-        Try
-            sql = "INSERT INTO nilai VALUES (null,'" + nilai.ToString + "',+'" + bobot + "',+'" + id_kriteria + "')"
-            CRUD_data(sql)
-            Return True
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-            Return False
-        End Try
-    End Function
+
+    'Public Function insert() As Boolean
+    '    Try
+    '        sql = "INSERT INTO nilai VALUES (null,'" + nilai.ToString + "',+'" + bobot + "',+'" + id_kriteria + "')"
+    '        CRUD_data(sql)
+    '        Return True
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '        Return False
+    '    End Try
+    'End Function
 
 
 
-    Public Function update() As Boolean
-        Try
-            sql = "UPDATE nilai SET nilai= '" + nilai.ToString + "', bobot = '" + bobot.ToString + "'WHERE id= " & id.ToString & ""
-            CRUD_data(sql)
-            Return True
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-            Return False
-        End Try
-    End Function
+    'Public Function update() As Boolean
+    '    Try
+    '        sql = "UPDATE nilai SET nilai= '" + nilai.ToString + "', bobot = '" + bobot.ToString + "'WHERE id= " & id.ToString & ""
+    '        CRUD_data(sql)
+    '        Return True
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '        Return False
+    '    End Try
+    '    'End Function
 
-    Public Function delete() As Boolean
-        Try
-            sql = "DELETE FROM nilai WHERE id= " & id & ""
-            CRUD_data(sql)
-            Return True
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-            Return False
-        End Try
-    End Function
-    Public Function selectAll() As List(Of nilaiDao)
-        Dim listPasien As New List(Of nilaiDao)
-        sql = "SELECT * FROM nilai "
+    'Public Function delete() As Boolean
+    '    Try
+    '        sql = "DELETE FROM nilai WHERE id= " & id & ""
+    '        CRUD_data(sql)
+    '        Return True
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '        Return False
+    '    End Try
+    'End Function
+    Public Function selectAll() As List(Of NilaiDao)
+        Dim nilaiDao As New List(Of NilaiDao)
+        sql = "select k.id,k.kriteria,k.bobot as 'Bobot Kriteria',n.nilai,n.bobot as 'Konversi' from kriteria k join nilai n on k.id=n.id_kriteria"
         dtTable = get_dttable(sql)
-        listPasien = (From row As DataRow In dtTable.Rows
+        nilaiDao = (From row As DataRow In dtTable.Rows
                     Select New NilaiDao() With
-                           {.id = row("id"),
+                           {
+                            .id = row("id"),
+                            .kriteria = row("kriteria"),
+                            .bobotKriteria = row("Bobot Kriteria"),
                             .nilai = row("nilai"),
-                            .bobot = row("bobot")
+                            .konversi = row("Konversi")
                             }).ToList
-        Return listPasien
+        Return nilaiDao
 
     End Function
-    Public Function selectByNama(nama As String) As List(Of nilaiDao)
-        Dim listPasien As New List(Of nilaiDao)
-        sql = "SELECT * FROM nilai WHERE nilai like '%" + nama.ToString + "%'"
-        dtTable = get_dttable(sql)
-        listPasien = (From row As DataRow In dtTable.Rows
-                    Select New nilaiDao() With
-                            {.id = row("id"),
-                            .nilai = row("nilai"),
-                            .bobot = row("bobot")
-                            }).ToList
-        Return listPasien
+    'Public Function selectByNama(nama As String) As List(Of NilaiDao)
+    '    Dim listPasien As New List(Of NilaiDao)
+    '    sql = "SELECT * FROM nilai WHERE nilai like '%" + nama.ToString + "%'"
+    '    dtTable = get_dttable(sql)
+    '    listPasien = (From row As DataRow In dtTable.Rows
+    '                Select New NilaiDao() With
+    '                        {.id = row("id"),
+    '                        .nilai = row("nilai"),
+    '                        .bobot = row("bobot")
+    '                        }).ToList
+    '    Return listPasien
 
-    End Function
+    'End Function
 
 End Class

@@ -468,4 +468,6 @@ Public Class Main
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         PopUpFormPenduduk.Show()
     End Sub
+
+    
 End Class

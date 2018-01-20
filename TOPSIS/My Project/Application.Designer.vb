@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.TOPSIS.FormPenduduk
+            Me.MainForm = Global.TOPSIS.NilaiKriteria
         End Sub
     End Class
 End Namespace

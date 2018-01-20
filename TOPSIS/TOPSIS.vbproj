@@ -77,6 +77,12 @@
     <Compile Include="class\PerhitunganDao.vb" />
     <Compile Include="connect\Koneksi.vb" />
     <Compile Include="connect\QueryDao.vb" />
+    <Compile Include="FormKriteria.Designer.vb">
+      <DependentUpon>FormKriteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKriteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormPenduduk.Designer.vb">
       <DependentUpon>FormPenduduk.vb</DependentUpon>
     </Compile>
@@ -105,6 +111,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NilaiKriteria.Designer.vb">
+      <DependentUpon>NilaiKriteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NilaiKriteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PopUpFormPenduduk.Designer.vb">
       <DependentUpon>PopUpFormPenduduk.vb</DependentUpon>
     </Compile>
@@ -113,6 +125,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormKriteria.resx">
+      <DependentUpon>FormKriteria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPenduduk.resx">
       <DependentUpon>FormPenduduk.vb</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +139,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NilaiKriteria.resx">
+      <DependentUpon>NilaiKriteria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUpFormPenduduk.resx">
       <DependentUpon>PopUpFormPenduduk.vb</DependentUpon>
