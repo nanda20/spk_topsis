@@ -22,8 +22,8 @@ Partial Class NilaiKriteria
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tabelKriteria = New System.Windows.Forms.DataGridView()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,9 +38,7 @@ Partial Class NilaiKriteria
         Me.cmbNilai = New System.Windows.Forms.ComboBox()
         Me.cmbKriteria = New System.Windows.Forms.ComboBox()
         Me.btnReset = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.btnInsert = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -63,6 +61,8 @@ Partial Class NilaiKriteria
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtIdKriteriaHide = New System.Windows.Forms.Label()
+        Me.txtIdNilaiHide = New System.Windows.Forms.Label()
         CType(Me.tabelKriteria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -72,23 +72,23 @@ Partial Class NilaiKriteria
         '
         'tabelKriteria
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tabelKriteria.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tabelKriteria.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.tabelKriteria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.tabelKriteria.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.tabelKriteria.DefaultCellStyle = DataGridViewCellStyle4
         Me.tabelKriteria.Location = New System.Drawing.Point(17, 21)
         Me.tabelKriteria.Name = "tabelKriteria"
         Me.tabelKriteria.Size = New System.Drawing.Size(543, 486)
@@ -133,6 +133,8 @@ Partial Class NilaiKriteria
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Panel3.Controls.Add(Me.txtIdNilaiHide)
+        Me.Panel3.Controls.Add(Me.txtIdKriteriaHide)
         Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Controls.Add(Me.txtBobotKriteria)
@@ -142,9 +144,7 @@ Partial Class NilaiKriteria
         Me.Panel3.Controls.Add(Me.cmbKriteria)
         Me.Panel3.Controls.Add(Me.txtKonversi)
         Me.Panel3.Controls.Add(Me.btnReset)
-        Me.Panel3.Controls.Add(Me.btnDelete)
         Me.Panel3.Controls.Add(Me.btnUpdate)
-        Me.Panel3.Controls.Add(Me.btnInsert)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.Label5)
@@ -161,6 +161,7 @@ Partial Class NilaiKriteria
         '
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label12.Font = New System.Drawing.Font("Calibri", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Label12.Location = New System.Drawing.Point(546, 101)
@@ -238,27 +239,12 @@ Partial Class NilaiKriteria
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnReset.Location = New System.Drawing.Point(443, 190)
+        Me.btnReset.Location = New System.Drawing.Point(259, 181)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(101, 40)
         Me.btnReset.TabIndex = 26
         Me.btnReset.Text = "RESET"
         Me.btnReset.UseVisualStyleBackColor = False
-        '
-        'btnDelete
-        '
-        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDelete.FlatAppearance.BorderSize = 0
-        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnDelete.Location = New System.Drawing.Point(345, 190)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(101, 40)
-        Me.btnDelete.TabIndex = 25
-        Me.btnDelete.Text = "DELETE"
-        Me.btnDelete.UseVisualStyleBackColor = False
         '
         'btnUpdate
         '
@@ -268,27 +254,12 @@ Partial Class NilaiKriteria
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUpdate.Location = New System.Drawing.Point(246, 190)
+        Me.btnUpdate.Location = New System.Drawing.Point(159, 181)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(101, 40)
         Me.btnUpdate.TabIndex = 24
         Me.btnUpdate.Text = "UPDATE"
         Me.btnUpdate.UseVisualStyleBackColor = False
-        '
-        'btnInsert
-        '
-        Me.btnInsert.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
-        Me.btnInsert.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnInsert.FlatAppearance.BorderSize = 0
-        Me.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInsert.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.btnInsert.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnInsert.Location = New System.Drawing.Point(149, 190)
-        Me.btnInsert.Name = "btnInsert"
-        Me.btnInsert.Size = New System.Drawing.Size(101, 40)
-        Me.btnInsert.TabIndex = 23
-        Me.btnInsert.Text = "INSERT"
-        Me.btnInsert.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -330,9 +301,9 @@ Partial Class NilaiKriteria
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(21, 103)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 23)
+        Me.Label6.Size = New System.Drawing.Size(53, 23)
         Me.Label6.TabIndex = 5
-        Me.Label6.Text = "GENDER"
+        Me.Label6.Text = "NILAI"
         '
         'Label4
         '
@@ -543,6 +514,28 @@ Partial Class NilaiKriteria
         Me.Label19.TabIndex = 8
         Me.Label19.Text = "NIK"
         '
+        'txtIdKriteriaHide
+        '
+        Me.txtIdKriteriaHide.AutoSize = True
+        Me.txtIdKriteriaHide.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdKriteriaHide.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtIdKriteriaHide.Location = New System.Drawing.Point(109, 25)
+        Me.txtIdKriteriaHide.Name = "txtIdKriteriaHide"
+        Me.txtIdKriteriaHide.Size = New System.Drawing.Size(27, 23)
+        Me.txtIdKriteriaHide.TabIndex = 39
+        Me.txtIdKriteriaHide.Text = "ID"
+        '
+        'txtIdNilaiHide
+        '
+        Me.txtIdNilaiHide.AutoSize = True
+        Me.txtIdNilaiHide.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdNilaiHide.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtIdNilaiHide.Location = New System.Drawing.Point(102, 101)
+        Me.txtIdNilaiHide.Name = "txtIdNilaiHide"
+        Me.txtIdNilaiHide.Size = New System.Drawing.Size(27, 23)
+        Me.txtIdNilaiHide.TabIndex = 40
+        Me.txtIdNilaiHide.Text = "ID"
+        '
         'NilaiKriteria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -574,9 +567,7 @@ Partial Class NilaiKriteria
     Friend WithEvents txtKonversi As System.Windows.Forms.TextBox
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btnReset As System.Windows.Forms.Button
-    Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
-    Friend WithEvents btnInsert As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -606,4 +597,6 @@ Partial Class NilaiKriteria
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents txtIdKriteriaHide As System.Windows.Forms.Label
+    Friend WithEvents txtIdNilaiHide As System.Windows.Forms.Label
 End Class

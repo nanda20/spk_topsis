@@ -13,3 +13,4 @@ D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.FormPenduduk.resources
 D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.Main.resources
 D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.NilaiKriteria.resources
 D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.FormKriteria.resources
+D:\POLINEMA\sem7\SPK\TA\TOPSIS\TOPSIS\obj\Debug\TOPSIS.FormNilai.resources

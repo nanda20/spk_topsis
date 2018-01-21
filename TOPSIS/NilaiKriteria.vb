@@ -10,7 +10,7 @@ Public Class NilaiKriteria
         getKriteria()
         'getNilai(cmbKriteria.SelectedValue)
     End Sub
-    Private Sub loadTabelKriteria()
+    Public Sub loadTabelKriteria()
 
         tabelKriteria.DataSource = New NilaiDao().selectAll
         tabelKriteria.Refresh()
@@ -30,6 +30,53 @@ Public Class NilaiKriteria
             cmbKriteria.DataSource = dtTable
             cmbKriteria.DisplayMember = "kriteria"
             cmbKriteria.ValueMember = "id"
+
+            conn.Close()
+        Catch ex As Exception
+            MsgBox("gagal" + ex.ToString)
+            conn.Close()
+        End Try
+
+    End Sub
+
+    Public Sub getBobotKriteria(kriteria As String)
+        Dim sql As String = "select * from kriteria where kriteria='" + kriteria + "'"
+
+        Try
+            konkeksiDB()
+            conn.Open()
+            dtTable = New DataTable
+            cmd = New MySqlCommand(sql, conn)
+            dtReader = cmd.ExecuteReader
+            While dtReader.Read()
+                'MsgBox(dtReader("bobot"))
+                txtBobotKriteria.Text = dtReader("bobot")
+
+            End While
+
+            conn.Close()
+        Catch ex As Exception
+            MsgBox("gagal" + ex.ToString)
+            conn.Close()
+        End Try
+
+    End Sub
+
+    Public Sub getBobotNilai(nilai As String)
+        Dim sql As String = "select * from nilai where nilai='" + nilai + "'"
+
+        Try
+            konkeksiDB()
+            conn.Open()
+            dtTable = New DataTable
+            cmd = New MySqlCommand(sql, conn)
+            dtReader = cmd.ExecuteReader
+            While dtReader.Read()
+                'MsgBox(dtReader("bobot"))
+                
+                txtKonversi.Text = dtReader("bobot")
+
+            End While
 
             conn.Close()
         Catch ex As Exception
@@ -64,6 +111,8 @@ Public Class NilaiKriteria
         Try
             If (cmbKriteria.SelectedValue > 0) Then
                 getNilai(cmbKriteria.SelectedValue)
+                getBobotKriteria(cmbKriteria.Text)
+
             End If
 
         Catch ex As Exception
@@ -81,7 +130,7 @@ Public Class NilaiKriteria
         txtKonversi.Text = tabelKriteria.Item(4, index).Value.ToString
     End Sub
 
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -92,5 +141,59 @@ Public Class NilaiKriteria
 
     Private Sub cmbKriteria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbKriteria.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub cmbNilai_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbNilai.SelectedValueChanged
+        getBobotNilai(cmbNilai.Text)
+        Try
+            txtIdNilaiHide.Text = cmbNilai.SelectedValue
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click
+        FormNilai.Show()
+
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Try
+            sql = "UPDATE kriteria set kriteria = '" + cmbKriteria.Text.ToString + " ',bobot= " & txtBobotKriteria.Text & " where id=" & txtIdKriteriaHide.Text & ""
+            CRUD_data(sql)
+            'sql = "UPDATE kriteria set kriteria = " + cmbKriteria.Text.ToString + " ',bobot= '" + txtBobotKriteria.Text.ToString + "')"
+            'CRUD_data(sql)
+            'MsgBox("Data Berhasil Di Simpan")
+
+            sql = "UPDATE nilai set nilai = '" + cmbNilai.Text.ToString + " ',bobot= " & txtKonversi.Text & " where id=" & txtIdNilaiHide.Text & ""
+            CRUD_data(sql)
+
+            MsgBox("Data Berhasil Di Update")
+
+            getKriteria()
+            loadTabelKriteria()
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+
+        End Try
+    End Sub
+
+    Private Sub cmbKriteria_TextChanged(sender As Object, e As EventArgs) Handles cmbKriteria.TextChanged
+        Try
+            If (cmbKriteria.SelectedValue > 0) Then
+                txtIdKriteriaHide.Text = cmbKriteria.SelectedValue.ToString
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+        'txtKriteriaHide.Text = cmbKriteria.Text
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        getKriteria()
     End Sub
 End Class

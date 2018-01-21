@@ -77,6 +77,12 @@
     <Compile Include="class\PerhitunganDao.vb" />
     <Compile Include="connect\Koneksi.vb" />
     <Compile Include="connect\QueryDao.vb" />
+    <Compile Include="FormNilai.Designer.vb">
+      <DependentUpon>FormNilai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNilai.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormKriteria.Designer.vb">
       <DependentUpon>FormKriteria.vb</DependentUpon>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormNilai.resx">
+      <DependentUpon>FormNilai.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKriteria.resx">
       <DependentUpon>FormKriteria.vb</DependentUpon>
     </EmbeddedResource>

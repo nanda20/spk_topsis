@@ -22,74 +22,14 @@ Partial Class FormKriteria
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtKriteria = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnInsert = New System.Windows.Forms.Button()
         Me.txtBobot = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnInsert = New System.Windows.Forms.Button()
+        Me.txtKriteria = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'txtKriteria
-        '
-        Me.txtKriteria.Font = New System.Drawing.Font("Tahoma", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKriteria.Location = New System.Drawing.Point(153, 23)
-        Me.txtKriteria.Name = "txtKriteria"
-        Me.txtKriteria.Size = New System.Drawing.Size(252, 28)
-        Me.txtKriteria.TabIndex = 38
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(132, 23)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(15, 23)
-        Me.Label9.TabIndex = 37
-        Me.Label9.Text = ":"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(18, 26)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(82, 23)
-        Me.Label10.TabIndex = 36
-        Me.Label10.Text = "KRITERIA"
-        '
-        'txtBobot
-        '
-        Me.txtBobot.Font = New System.Drawing.Font("Tahoma", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBobot.Location = New System.Drawing.Point(153, 57)
-        Me.txtBobot.Name = "txtBobot"
-        Me.txtBobot.Size = New System.Drawing.Size(252, 28)
-        Me.txtBobot.TabIndex = 41
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(132, 57)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(15, 23)
-        Me.Label1.TabIndex = 40
-        Me.Label1.Text = ":"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(18, 60)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 23)
-        Me.Label2.TabIndex = 39
-        Me.Label2.Text = "BOBOT"
         '
         'btnInsert
         '
@@ -99,12 +39,72 @@ Partial Class FormKriteria
         Me.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInsert.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.btnInsert.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnInsert.Location = New System.Drawing.Point(153, 106)
+        Me.btnInsert.Location = New System.Drawing.Point(166, 101)
         Me.btnInsert.Name = "btnInsert"
         Me.btnInsert.Size = New System.Drawing.Size(101, 40)
-        Me.btnInsert.TabIndex = 42
+        Me.btnInsert.TabIndex = 49
         Me.btnInsert.Text = "INSERT"
         Me.btnInsert.UseVisualStyleBackColor = False
+        '
+        'txtBobot
+        '
+        Me.txtBobot.Font = New System.Drawing.Font("Tahoma", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBobot.Location = New System.Drawing.Point(166, 52)
+        Me.txtBobot.Name = "txtBobot"
+        Me.txtBobot.Size = New System.Drawing.Size(252, 28)
+        Me.txtBobot.TabIndex = 48
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(145, 52)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(15, 23)
+        Me.Label1.TabIndex = 47
+        Me.Label1.Text = ":"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(31, 55)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 23)
+        Me.Label2.TabIndex = 46
+        Me.Label2.Text = "BOBOT"
+        '
+        'txtKriteria
+        '
+        Me.txtKriteria.Font = New System.Drawing.Font("Tahoma", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKriteria.Location = New System.Drawing.Point(166, 18)
+        Me.txtKriteria.Name = "txtKriteria"
+        Me.txtKriteria.Size = New System.Drawing.Size(252, 28)
+        Me.txtKriteria.TabIndex = 45
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(145, 18)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(15, 23)
+        Me.Label9.TabIndex = 44
+        Me.Label9.Text = ":"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(31, 21)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(82, 23)
+        Me.Label10.TabIndex = 43
+        Me.Label10.Text = "KRITERIA"
         '
         'FormKriteria
         '
@@ -118,20 +118,18 @@ Partial Class FormKriteria
         Me.Controls.Add(Me.txtKriteria)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label10)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "FormKriteria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormKriteria"
+        Me.Text = "FormNilai"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents txtKriteria As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents btnInsert As System.Windows.Forms.Button
     Friend WithEvents txtBobot As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents btnInsert As System.Windows.Forms.Button
+    Friend WithEvents txtKriteria As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class
