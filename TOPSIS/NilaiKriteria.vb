@@ -196,4 +196,8 @@ Public Class NilaiKriteria
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         getKriteria()
     End Sub
+
+    Private Sub tabelKriteria_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tabelKriteria.CellContentClick
+
+    End Sub
 End Class

@@ -110,6 +110,7 @@ Partial Class FormKriteria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.TOPSIS.My.Resources.Resources.pw_maze_white__2X
         Me.ClientSize = New System.Drawing.Size(449, 158)
         Me.Controls.Add(Me.btnInsert)
         Me.Controls.Add(Me.txtBobot)
@@ -118,6 +119,8 @@ Partial Class FormKriteria
         Me.Controls.Add(Me.txtKriteria)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label10)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormKriteria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormNilai"

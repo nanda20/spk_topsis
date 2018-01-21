@@ -6,7 +6,23 @@ TOPSIS
 </name>
 </assembly>
 <members>
-<member name="P:TOPSIS.My.Resources.Resources.ResourceManager">
+<member name="T:TOPSIS.Penduduk.PendudukDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:TOPSIS.Penduduk.PendudukRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:TOPSIS.Penduduk.PendudukRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:TOPSIS.Penduduk">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:TOPSIS.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -14,6 +30,10 @@ TOPSIS
 	<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:TOPSIS.My.Resources.Resources.pw_maze_white__2X">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="T:TOPSIS.My.Resources.Resources">
 	<summary>

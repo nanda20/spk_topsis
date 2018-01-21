@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Penduduk" targetNamespace="http://tempuri.org/Penduduk.xsd" xmlns:mstns="http://tempuri.org/Penduduk.xsd" xmlns="http://tempuri.org/Penduduk.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="projectspkConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="projectspkConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TOPSIS.My.MySettings.GlobalReference.Default.projectspkConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Penduduk" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Penduduk" msprop:Generator_UserDSName="Penduduk">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Penduduk" msprop:Generator_TableClassName="PendudukDataTable" msprop:Generator_TableVarName="tablePenduduk" msprop:Generator_TablePropName="_Penduduk" msprop:Generator_RowDeletingName="PendudukRowDeleting" msprop:Generator_RowChangingName="PendudukRowChanging" msprop:Generator_RowEvHandlerName="PendudukRowChangeEventHandler" msprop:Generator_RowDeletedName="PendudukRowDeleted" msprop:Generator_UserTableName="Penduduk" msprop:Generator_RowChangedName="PendudukRowChanged" msprop:Generator_RowEvArgName="PendudukRowChangeEvent" msprop:Generator_RowClassName="PendudukRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" />
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama" type="xs:string" minOccurs="0" />
+              <xs:element name="nik" msprop:Generator_ColumnVarNameInTable="columnnik" msprop:Generator_ColumnPropNameInRow="nik" msprop:Generator_ColumnPropNameInTable="nikColumn" msprop:Generator_UserColumnName="nik" type="xs:string" minOccurs="0" />
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat" type="xs:string" minOccurs="0" />
+              <xs:element name="total_nilai" msprop:Generator_ColumnVarNameInTable="columntotal_nilai" msprop:Generator_ColumnPropNameInRow="total_nilai" msprop:Generator_ColumnPropNameInTable="total_nilaiColumn" msprop:Generator_UserColumnName="total_nilai" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="PendudukKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Penduduk" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

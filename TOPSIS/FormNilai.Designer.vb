@@ -144,6 +144,7 @@ Partial Class FormNilai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.TOPSIS.My.Resources.Resources.pw_maze_white__2X
         Me.ClientSize = New System.Drawing.Size(477, 188)
         Me.Controls.Add(Me.txtKateogri)
         Me.Controls.Add(Me.Label3)

@@ -459,7 +459,7 @@ Public Class Main
             Catch ex As Exception
                 MsgBox(ex.ToString)
             End Try
-
+            reset()
         Next
         tabelPerhitungan.Rows.Clear()
         loadTabelPerhitungan()
@@ -470,4 +470,30 @@ Public Class Main
     End Sub
 
     
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+    Public Sub reset()
+        txtID.Text = ""
+        txtNama.Text = ""
+        txtNoKtp.Text = ""
+        txtAlamat.Text = ""
+    End Sub
+
+    Private Sub tabelPerhitungan_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tabelPerhitungan.CellContentClick
+        
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        reset()
+    End Sub
+
+    Private Sub tabelPerhitungan_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles tabelPerhitungan.CellClick
+        Dim index As Integer = tabelPerhitungan.SelectedCells.Item(0).RowIndex
+
+        txtID.Text = tabelPerhitungan.Item(0, index).Value.ToString
+        txtNoKtp.Text = tabelPerhitungan.Item(0, index).Value.ToString
+        txtNama.Text = tabelPerhitungan.Item(1, index).Value.ToString
+        txtAlamat.Text = "-"
+    End Sub
 End Class
